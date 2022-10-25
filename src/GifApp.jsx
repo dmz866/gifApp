@@ -1,16 +1,13 @@
 import { useState } from "react";
 import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
-import { getGifs } from './helpers/gifHelper';
 
 export const GifApp = () => {
-	const [categories, setCategories] = useState(['One Punch']);
+	const [categories, setCategories] = useState([]);
 
 	const addNewCategory = (newCategory) => {
 		setCategories([...categories, newCategory]);
 	};
-
-	getGifs('dragon');
 
 	return (
 		<>
