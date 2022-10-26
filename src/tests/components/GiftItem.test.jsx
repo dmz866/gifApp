@@ -18,4 +18,11 @@ describe('Test GiftItem', () => {
 		expect(src).toContain(url);
 		expect(alt).toBe(titulo);
 	});
+
+	test('debe mostrar el titulo en el componente', () => {
+		render(<GiftItem titulo={titulo} url={url} />);
+		const result = screen.getByText(titulo);
+
+		expect(result).toBeTruthy();
+	});
 });
