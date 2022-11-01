@@ -9,7 +9,7 @@ export const GiftItem = ({ titulo, url }) => {
 	)
 };
 
-GiftItem.protoTypes = {
+GiftItem.propTypes = {
 	titulo: PropTypes.string.required,
 	url: PropTypes.string.required
 };
